@@ -5,7 +5,7 @@ const debounce = require('lodash.debounce');
 
 // Task to commit changes
 gulp.task('commit-changes', function() {
-    return gulp.src(['./src/**/*.js'])
+    return gulp.src(['./src/**/*.js', './Lessons/**/*.js'])
         .pipe(git.add()) // Add all files to staging area
         .pipe(git.commit('Automated commit')); // Commit changes with a default message
 });
@@ -36,12 +36,3 @@ gulp.task('watch', function() {
 
 // Default task to start watching for changes and pull changes from remote repository
 gulp.task('default', gulp.series('pull-changes', 'watch'));
-
-// const gulp = require('gulp');
-
-// // Define an asynchronous task using a stream
-// gulp.task('hello', function() {
-//     return gulp.src('src/*.js')
-//         .pipe(/* Some transformations */)
-//         .pipe(gulp.dest('dist/'));
-// });
