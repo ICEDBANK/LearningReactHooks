@@ -28,7 +28,7 @@ const debouncedCommitAndPush = debounce(function() {
 
 // Watch task to trigger commit and push after a debounce period
 gulp.task('watch', function() {
-    watch(['./src/**/*.js', './pages/**/*.js', './components/**/*.js'], function() {
+    watch(['./src/**/*.js', './Lessons/**/*.js'], function() {
         console.log('Change detected. Triggering debounce...');
         debouncedCommitAndPush();
     });
