@@ -3,6 +3,17 @@ import { useState , useEffect } from "react";
 function App() {
 
   const [count, setCount] = useState(0);
+
+  //useEffect takes two parameters 1.) anonomous arrow Function and an Array
+
+  useEffect(() => {
+    
+    console.log(count);
+
+  }, [ // The dependency Array
+
+
+  ])
   
 
   return (
