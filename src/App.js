@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     
-    console.log(count);
+    console.log(count * 2);
 
   }, [ // The dependency Array
 
