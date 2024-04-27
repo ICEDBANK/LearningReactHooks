@@ -12,6 +12,7 @@ function App() {
 
   }, [ // The dependency Array
 
+    count
 
   ])
   
